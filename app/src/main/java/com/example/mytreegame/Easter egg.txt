@@ -1,0 +1,6 @@
+Geen dashes gebruikt "oeh knap"
+Ook oplossing goed keuren zonder enige Ts geplaatst dus een empty space check
+"You're dashing through life"
+na X fouten gemaakt nog steeds opgelost (alleen tellen als het ook echt rood werd)
+eerste keer opgelost met assists
+"had je dit ook zonder hulp gekund?"
