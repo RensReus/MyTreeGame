@@ -1,0 +1,3 @@
+Efficientere valid shuffle
+type 1 veld
+eerst breid 1 van de N velden uit tot een 1x(1-N) uit, misschien een leuke kansverdeling? vaak 2,3 minder vaak 4-N

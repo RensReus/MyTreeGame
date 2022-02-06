@@ -1,0 +1,78 @@
+Ideeën voor die game op basis van dat sporcle spel
+Stap 1
+Definieer basis kleuren
+doe check op basis van regio
+
+stap 2
+jat een paar spellen uit sporcle
+level importer die dit kan lezen en omzetten (misschien gewoon ff op deze manier opslaan in de start gewoon een text doc met levels die iedere keer geimporteerd wordt)
+11222
+12233
+44433
+54533
+55533
+
+New line separation between games
+dit zou dan spel 1 uit de playlist zijn https://www.sporcle.com/games/Katie_Wandering/trees-logic-puzzle-i?playlist=trees-logic-puzzles&creator=SporcleEXP&pid=1C1c50a2XS
+voor het verdere testen pak een random level uit wat ik ingevuld heb
+
+VANAF hier wss langzaam beginnen met een solver die ik visueel implementeer met tappen die steeds 1 ontdekking invult en toont welke techniek ie gebruikt op basis van naam en aangeven welke veranderd zijn ()
+ook met grotere stappen er door heen of bv continue tot volgende boom of
+Dit wordt misschien een admin mode of zo
+of gewoon losse build
+
+stap 3
+long press is hetzelfde als dubbel tap of de andere kant op door de stappen
+
+stap 4
+undo knop, dus ook history implementeren
+
+stap 5  wss eerder
+auto help
+bij plaasten van boom meteen hele rij/kom en en de 4 hoek punten
+alles opslaan in arrays
+Dit moet apart opgeslagen worden dan manual input
+
+Stap 6 (mogelijk eerder)
+toon errors als je een invalide staat bereikt
+door gewoon de simple regels te checken
+precies 1 boom per rij/kolom/gebied
+geen aangrenzende bomen
+
+Stap 7
+blauw vul input kan je ook mee draggen om op die manier hele rijen en kolommen te selecteren
+input swap knop
+
+Level generatie
+Stap 1 jat een paar spellen uit sporcle
+en misschien een makkelijke manier opzetten om levels te importeren
+misschien iets van de vorm
+11222
+12233
+44433
+54533
+55533
+dit zou dan spel 1 uit de playlist zijn https://www.sporcle.com/games/Katie_Wandering/trees-logic-puzzle-i?playlist=trees-logic-puzzles&creator=SporcleEXP&pid=1C1c50a2XS
+
+Stap 2 zelf bedenken en kijken wat voor stappen dat je daarin neemt ter inspiratie voor de auto generation
+Misschien gewoon de bomen neerzetten heel makkelijk om valid te krijgen
+en dan kijken wat voor gebieden mogelijk zijn
+zal wss in het begin saaie levels geven maar dat geeft niet
+
+
+Stap 2
+Difficulty
+wss een soort solver nodig die het spel evalueert
+misschien kijken hoeveel volgende stappen er tijdens het oplossen zijn
+al deze routes evalueren en middelen
+Definitie volgende stap. Hier zijn ook meerdere niveaus in misschien op basis hier van nog wat definieren
+kijk waar bomen niet kunnen dus empty en kijk waar bomen moeten door de enige in rij/kolom/veld
+(kleine) velden van maar 1 kolom rij zijn het makkelijkst kwa stap 1
+daarna vanaf de randen kijken of er x gebieden in x rijen/kolommen zitten dan kunnen we de rest van die gebieden uitsluiten
+
+een stapje lastiger kijken of x gebieden volledig binnen x rijen of kolommen zitten dan sluit je de rest van de gebieden met velden in die rijen kolommen uit (in eerste instantie ook alleen vanaf de randen)
+als ik hier een boom zou plaatsen dan gaat het fout is al een 2 stappen process want je doet alsof je een boom plaatst maar dan skip je het
+
+
+Extra bonussen
+uitleg/settings op basis van system taal

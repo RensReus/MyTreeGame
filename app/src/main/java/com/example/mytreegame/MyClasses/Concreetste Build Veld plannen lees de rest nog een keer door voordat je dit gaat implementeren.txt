@@ -1,0 +1,21 @@
+FF checken waarom huidige code tot regios van 1 kan leiden
+doe bomen plaatsen
+KEUZE (kan allebei?)
+- eerste stap misschien alles random 1 (of 2) veld erbij geven?
+- voor X? gevallen kijk welke standaard blokken er passen (oh dit is een leuke voor difficulty)
+deze gaan we nooit veranderen?
+en deze sluiten een aantal velden uit
+noteer de uitgesloten velden 
+(we moeten nog zorgen dat onze X? velden wel beperkt gaan worden)
+zoek naar een standaard vorm voor één van de N-X die leidt tot een beperking van een van de X velden
+Hier mogen we gratis uitgesloten velden aan toevoegen
+
+Nu hebben we X?+1 regios vast staan?
+check wat er (stapsgewijs) uitgesloten is
+Wat moeten we nog uitsluiten
+Hoe kan dat
+
+
+
+X?
+5 -> 2

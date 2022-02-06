@@ -1,0 +1,35 @@
+generator met gebieden als uitgangspunt
+
+Tijd voor (pseudo)code
+
+TYPE Type 1 
+stap 1
+generate NxN field /Arrays
+
+stap 2
+eerst breid 1 van de N velden uit tot een 1x(2-N-2) dus voor 5 2 of 3
+de kolom of rij die uitgesloten wordt vul op met de 2 die er naast zitten
+AANNAME KOLOM VOOR TAAL GEBRUIK
+kijk welke dichtste bij boven en welke dichtste bij onder zit (wat als er geen boven en onder is?)
+dan groeien daar naar toe en dat plekje(s) pakken dit kan een kolom verder zijn
+
+sorteer de N kleuren in random volgorde voor verschillende groottes
+stap A kijken of er velden zijn die nog maar door enkele kleuren bereikbaar zijn
+stap B die invullen anders random alles 1 extra geven (met de groottes list als kans factor, en hou rekening met effecten van stap A (of juist niet?)) 
+
+herhaal deze stappen
+
+Stap 3 Gevuld veld
+Brute force oplossing?
+zet 1 willekeurig in kleinste veld schrap wat niet meer kan
+repeat until done of oplossing niet mogelijk
+max N! oplossingen maar in de praktijk achterlijk veel minder vooral omdat je van klein naar groot gaat
+
+
+als uniek dan boem puzzel (doe moeilijkheids rating)
+else stappen om uniekheid te maken
+
+En dat is nog best lastig
+maar we zijn nu iig ergens
+
+FF een zootje levels laten generen en dan met score van aantal oplossingen

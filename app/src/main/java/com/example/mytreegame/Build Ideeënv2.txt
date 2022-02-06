@@ -1,0 +1,2 @@
+Slim gebruik maken van "standaard" shapes
+dit is mogelijk een handige stap in het iteratieve process
