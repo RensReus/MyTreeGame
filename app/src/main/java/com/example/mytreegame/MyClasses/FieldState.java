@@ -13,11 +13,11 @@ public class FieldState {
     int treeCount = 0;
     int size;
     Cell[][] cells;
-    
+
     public FieldState(int[][] regionSetup, int size) {
         this.size = size;
         regions = new Region[size];
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             regions[i] = new Region();
         }
         columnTreeCount = new int[size];
@@ -25,8 +25,8 @@ public class FieldState {
         columnDashCount = new int[size];
         rowDashCount = new int[size];
         cells = new Cell[size][size];
-        for (int row = 0; row < size; row++){
-            for (int col = 0; col < size; col++){
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
                 int regionId = regionSetup[row][col];
                 regions[regionId].size++;
                 Cell cell = new Cell(row, col, regionId);
@@ -35,11 +35,12 @@ public class FieldState {
         }
     }
 
-    public FieldState() { }
+    public FieldState() {
+    }
 
     public void UpdateCellState(View v, CellState newState) {
-        int row = (int)v.getTag(R.id.row);
-        int col = (int)v.getTag(R.id.col);
+        int row = (int) v.getTag(R.id.row);
+        int col = (int) v.getTag(R.id.col);
         UpdateCellState(row, col, newState);
     }
 
@@ -74,25 +75,22 @@ public class FieldState {
                 columnDashCount[col]++;
                 break;
         }
-
-        for (int row2 = 0; row2 < size; row2++){
-            String line = "";
-            for (int col2 = 0; col2 < size; col2++){
-                line += cells[row][col].state.toString() + ", ";
-            }
-        }
     }
 
     public boolean Solved() {
-        return NoErrors() && treeCount == size;
+        return NoErrors() && (treeCount == size || onlyTreeFieldsOpen());
+    }
+
+    private boolean onlyTreeFieldsOpen() {
+        return false;
     }
 
     public boolean NoErrors() {
         Integer errorCount = 0;
-        for (int row = 0; row < size; row++){
+        for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
                 cells[row][col].SetError(false);
-                if(CellHasError(row, col)){
+                if (CellHasError(row, col)) {
                     cells[row][col].SetError(true);
                     errorCount++;
                 }
@@ -113,17 +111,15 @@ public class FieldState {
     }
 
     public boolean CellHasNeighborTree(int row, int col) {
-        for (int x = row - 1; x < row + 2; x++){
-            if (x < 0 || x >= size)
-            {
+        for (int x = row - 1; x < row + 2; x++) {
+            if (x < 0 || x >= size) {
                 continue;
             }
             for (int y = col - 1; y < col + 2; y++) {
-                if (y < 0 || y >= size || (x == row && y == col))
-                {
+                if (y < 0 || y >= size || (x == row && y == col)) {
                     continue;
                 }
-                if(cells[x][y].state == CellState.Tree) {
+                if (cells[x][y].state == CellState.Tree) {
                     return true;
                 }
             }
@@ -132,8 +128,8 @@ public class FieldState {
     }
 
     public Cell GetCell(View btn) {
-        int row = (int)btn.getTag(R.id.row);
-        int col = (int)btn.getTag(R.id.col);
+        int row = (int) btn.getTag(R.id.row);
+        int col = (int) btn.getTag(R.id.col);
         return cells[row][col];
     }
 

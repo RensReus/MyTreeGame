@@ -19,12 +19,12 @@ public class Helper {
                 return x;
             }
         });
-		List<Integer> intList = Arrays.asList(array);
-        while(!IsValid(intList)){
+        List<Integer> intList = Arrays.asList(array);
+        while (!IsValid(intList)) {
             Collections.shuffle(intList);
         }
 
-		return intList.toArray(array);
+        return intList.toArray(array);
     }
 
     public static boolean IsValid(List<Integer> list) {
@@ -32,7 +32,7 @@ public class Helper {
         int dimension = list.size();
         for (int j = 0; j < dimension - 1; j++) {
             valid = Math.abs(list.get(j) - list.get(j + 1)) > 1;
-            if (!valid){
+            if (!valid) {
                 break;
             }
         }

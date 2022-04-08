@@ -19,3 +19,38 @@ Hoe kan dat
 
 X?
 5 -> 2
+
+
+
+Ideeën set 2
+doe bomen plaatsen
+voor iedere tree check kan ik een standard shape plaatsen op zo'n manier dat alles iig 3 groot kan worden
+zo ja doe (met random order zodat we variatie in velden houden)
+als ik geen standard shape kan plaatsen dan gewoon +2
+
+na deze stappen heb ik nog 2 problemen
+sommige velden zijn niet geclaimd en niet alle velden zijn beperkt kwa waar een tree mag
+
+welke combi van 2 leidt tot het meeste wegstrepen?
+zet die vast
+daarna kijken welke gekleurde vakjes er nog weg moeten
+en welke ongeclaimde er naar welk gebied moeten en het effect daarvan op wegstrepen
+
+
+prerequisites
+define base shapes
+IDEE 3
+plaats standard shapes voor iig n - 2?
+Standardshapefunctie()
+GEGEVEN N*1 
+random list N
+for each
+    grab random shape
+    try placing in all orientations and shifts (zorg dat ik niks dubbel doe)
+    (if fits check if andere nog kunnen?)
+    place
+sommige kan je meteen wegstrepen door een andere
+er zijn nu nog open plekken
+- opvullen door N statisch houden
+- steeds 1 toevoegen en kijken of die meer of minder wegkrast
+- 

@@ -8,11 +8,13 @@
     android:background="#292929">
 
     <TextView
-        android:id="@+id/editText"
+        android:id="@+id/uitleg"
         android:layout_width="228dp"
         android:layout_height="100dp"
         android:layout_marginBottom="16dp"
+        android:editable="false"
         android:ems="10"
+        android:focusable="false"
         android:inputType="textMultiLine"
         android:text="Plaats precies één boom(T) in elke rij, kolom, regio. Bomen mogen niet raken ook niet diagonaal."
         android:textColor="#FFFFFF"
@@ -31,7 +33,7 @@
         android:columnCount="2"
         android:orientation="horizontal"
         android:rowCount="2"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/uitleg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +47,10 @@
         android:id="@+id/Rebuild"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rebuild"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="12dp"
+        android:text="New Game"
+        app:layout_constraintBottom_toTopOf="@+id/uitleg"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -56,10 +58,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="128dp"
+        android:editable="false"
+        android:focusable="false"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Rebuild"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/sizeInput"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="128dp"
+        android:hint="@android:string/VideoView_error_text_invalid_progressive_playback"
+        android:inputType="numberSigned|phone"
+        android:selectAllOnFocus="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/sizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:editable="false"
+        android:focusable="false"
+        android:text="Size"
+        android:textColor="#689F38"
+        app:layout_constraintBottom_toTopOf="@+id/uitleg"
+        app:layout_constraintEnd_toStartOf="@+id/sizeInput"
+        app:layout_constraintStart_toEndOf="@+id/Rebuild" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
